@@ -12,12 +12,13 @@ import ContactScreen from './screens/ContactScreen';
 import SettingScreen from './screens/SettingScreen';
 
 const Drawer = createDrawerNavigator();
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName='Accueil'>
-        <Drawer.Screen 
+      <Tab.Navigator initialRouteName='Accueil'>
+        <Tab.Screen 
           name="Accueil" 
           component={AccueilScreen}
           options={{
@@ -27,7 +28,7 @@ export default function App() {
           }}
         />
 
-        <Drawer.Screen 
+        <Tab.Screen 
           name="Contenus" 
           component={ContentScreen}
           options={{
@@ -37,7 +38,7 @@ export default function App() {
           }}
         />
 
-        <Drawer.Screen 
+        <Tab.Screen 
           name="A propos" 
           component={AboutScreen}
           options={{
@@ -47,7 +48,7 @@ export default function App() {
           }}
         />
 
-        <Drawer.Screen 
+        <Tab.Screen 
           name="Contact" 
           component={ContactScreen}
           options={{
@@ -57,7 +58,7 @@ export default function App() {
           }}
         />
 
-        <Drawer.Screen 
+        <Tab.Screen 
           name="Parametres" 
           component={SettingScreen}
           options={{
@@ -67,7 +68,7 @@ export default function App() {
           }}
         />
 
-      </Drawer.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
